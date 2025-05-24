@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CandyShop | Home</title>
+   <link rel="stylesheet" href="style.css">
+   <style>
+   body {
+   background: linear-gradient(to bottom, #f8f8f8, #333333);
+   background-attachment: fixed;
+   margin: 0;
+   padding: 0;
+   font-family: Arial, sans-serif;
+   }
+   
+   header {
+   width: 100%;
+   margin: 0 auto;
+   padding: 20px;
+   text-align: center;
+   border-radius: 2px;
+   background-color: rgba(255,255,255,0.8);
+   }
+   .close button {
+   color: black;
+   text-decoration: none;
+   
+   }
+   header a {
+   text-decoration: none;
+   color: black;
+   font-size: 0.6em;
+   }
+   header button {
+   border-radius: 3px;
+   border: none;
+   
+   }
+   
+   .form-container {
+   background-color: #f8f8f8;
+   margin: 20px auto;
+   width: 60%;
+   text-align: center;
+   padding: 20px;
+   border-radius: 30px;
+   }
+   
+   .form-container button {
+   padding: 10px;
+   margin: 8px;
+   border-radius: 15px;
+   background-color: black;
+   color: white;
+   border: none;
+   cursor: pointer;
+   }
+   
+   .form-container button:hover {
+   background-color: green;
+   }
+   
+   .foot-footer {
+   background-color: #333;
+   color: white;
+   padding: 20px 0; 
+   margin-top: 100px;
+   width: 100%;
+   text-align: center;
+   border-radius: 15px;
+   }
+   
+   .log-container {
+   background-color: #f8f8f8;
+   margin: 20px auto;
+   width: 60%;
+   text-align: center;
+   padding: 20px;
+   border-radius: 30px;
+   }
+   
+   .log-container button {
+   background-color: green;
+   padding: 10px;
+   margin: 8px;
+   border-radius: 15px;
+   color: white;
+   border: none;
+   cursor: pointer;
+   }
+   
+   .form-group {
+   margin-bottom: 15px;
+   }
+   .form-group a{
+   background-color: grey;
+   }
+   input {
+   padding: 8px;
+   border-radius: 5px;
+   border: 1px solid #ccc;
+   width: 80%;
+   }
+   
+   .social-icons img {
+   margin: 0 10px;
+   }
+      label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 50%;
+      padding: 10px;
+      border: 5px solid #ddd;
+      border-radius: 7px;
+      font-size: 16px;
+    }
+   </style>
+</head>
+<body>
+   <header>
+      <h1 style="font-family: 'Times New Roman', serif;"><em>PLACE ORDER</em></h1>
+	  <button class="close"><a href="home.html">EXIT</a></button>
+   </header>
+   
+   <div class="form-container">
+      <form id="orderForm">
+         <div class="form-group">
+		 <h1><em>YOUR ORDER</em></h1>
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
+         </div>
+         
+         <div class="form-group">
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" required placeholder="Enter your Last name">
+         </div>
+         
+         <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+         </div>
+         
+         <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+         </div>
+         
+		  <div class="form-group">
+            <label for="item">Item name</label>
+            <input type="item" id="password" name="item" required placeholder="Enter your selected item detail">
+         </div>
+		 
+		 <div class="form-group">
+            <label for="item size">Item size</label>
+            <input type="item size" id="item size" name="item size" required placeholder="Small/Medium/Large/xxLarge">
+         </div>
+		 
+         <button type="submit">SUBMIT</button>
+      </form>
+   </div>
+   
+   <div class="log-container">
+      <h1><em>Feedback?<em></h1>
+       <div class="form-group">
+        <label for="message">Message*</label>
+        <textarea id="message" required></textarea>
+        <div id="messageError" class="error hidden">Please enter your feedback.</div>
+      </div>
+         <button type="submit">Submit</button>
+      </form>
+   </div>
+   
+   <footer class="foot-footer">
+      <p>© 2025 Candy Clothing. All rights reserved.</p>
+      <div class="social-icons">
+         <a href="#"><img src="images/facebook.jpg" width="24" alt="Facebook"></a>
+         <a href="#"><img src="images/instagram.jpg" width="24" alt="Instagram"></a>
+         <a href="#"><img src="images/twitter.jpg" width="24" alt="Twitter"></a>
+      </div>
+   </footer>
+
+   <script src="js/script.js">
+</body>
+</html>

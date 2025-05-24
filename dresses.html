@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CandyShop | Home</title>
+   <link rel="stylesheet" href="style.css">
+   <style>
+   .hero-gallery {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+            border-radius: 15px;
+        }
+        
+        .hero-gallery .gallery-item {
+            flex: 0 0 30%;
+        }
+        
+        .hero-gallery .gallery-item img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .hero-gallery .gallery-text {
+            flex: 1;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .hero-gallery button {
+            background-color: orange;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+        
+        .hero-gallery button a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+     }
+     
+     body {
+            font-family: Arial, sans-serif;
+	        background-image: url('images/background.jpg');
+			background-attachment: fixed;
+			background-repeat: no-repeat;
+			background-size: cover;
+     }
+     
+
+.back-container-wrapper {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center; 
+    overflow-x: auto;
+    gap: 1px; 
+    padding: 48px; 
+    width: 95%; 
+    margin: 10px auto; 
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    height: 50%;
+}
+ .back-container-wrapper img{
+    width: 90%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 8px;	
+ }
+ .back-container-wrapper button {
+ background-color: #333;
+ padding: 10px;
+ border-radius: 10px;
+ color: white;
+ }
+ .back-container-wrapper a {
+ color: white;
+ text-decoration: none;
+ }
+ .back-more-container-wrapper {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center; 
+    overflow-x: auto;
+    gap: 1px; 
+    padding: 20px; 
+    width: 95%; 
+    margin: 10px auto; 
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    height: 30%;
+	margin-left: 45px;
+ }
+ .back-more-container-wrapper h3 {
+ color: black;
+ margin-left: 20px;
+ margin-top: -20px;
+
+ }
+ 
+  .back-more-container-wrapper h2 {
+    padding: 10px;
+	margin-top: -200px;
+	margin-left: 430px;
+  }
+  .back-more-container-wrapper p {
+    color: black;
+	margin-top: -1px;
+	text-align: center;
+	padding: 1px;
+	width: 70%;
+	margin-left: 80px;
+  }
+ .back-more-container-wrapper img {
+  margin-left: 20px;
+  border-radius: 20px;
+} 
+.back-more-container-wrapper a {
+color: black;
+font-weight: bold;
+text-decoration: none;
+}
+
+
+.back-another-container-wrapper {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center; 
+    overflow-x: auto;
+    gap: 1px; 
+    padding: 20px; 
+    width: 95%; 
+    margin: 10px auto; 
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    height: 50%;
+	margin-left: 1opx;
+}
+.back-another-container-wrapper button{
+background-color: #333;
+color: white;
+width: 40%;
+border-radius: 20px;
+}
+.back-another-container-wrapper a {
+color: white;
+text-decoration: none;
+}
+.back-another-container {
+padding: 0;
+background-color: white;
+margin: 5px;
+width: 10%;
+border-radius: 10px;
+}
+.back-another-container img {
+width: 50%}
+padding-left: 1px;
+margin-left: 40px;
+margin: 9px;
+}
+     .gallery-item {
+       flex: 1;
+       max-width: 300px;
+	   margin-left: 10px;
+     }
+     
+     .gallery-item img {
+       width: 100%;
+       height: auto;
+       border-radius: 15px;
+     }
+     
+     .gallery-text {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+     }
+     
+     .gallery-text button {
+       margin-top: 15px;
+       padding: 10px 20px;
+       background-color: #333;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+     }
+	 .gallery-text button a {
+	 color: white;
+	 text-decoration: none;
+	 }
+
+     footer {
+       text-align: center;
+       padding: 10px;
+       background-color: #f8f8f8;
+     }
+.foot-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0; 
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+   </style>
+</head>
+<body>
+<header>
+   <div class="header-top">
+   <div class="search-bar">
+      <input type="text"  id="searchInput" placeholder=" Search males & females products" list="searchSuggestions">
+	  <datalist id="searchSuggestions">
+    <option value="Home">
+    <option value="Shoes">
+    <option value="Males">
+    <option value="Dresses">
+    <option value="Shoes">
+	</datalist>
+	<button onclick="performSearch()">Enter</button>
+	</div>
+    <select class="currency-selector">
+      <option>ZAR(R)</option>
+      <option>USD($)</option>
+      <option>EUR(€)</option>
+    </select>
+    <a href="login.html" class="login-btn">Log in</a>
+  </div>
+   <nav>
+      <ul>
+	    <li><a href="home.html">Home</a></li>
+         <li><a href="what's new.html">What's New</a></li>
+         <li><a href="sports wear.html">Sports Wear</a></li>
+         <li><a href="clothing.html">Clothing</a></li>
+         <li><a href="dresses.html">Dresses</a></li>
+         <li><a href="shoes.html">Shoes</a></li>
+         <li><a href="bags.html">Bags</a></li>
+         <li><a href="females.html">Females</a></li>
+         <li><a href="males.html">Males</a></li>
+      </ul>
+   </nav>
+</header>
+ <h1 style="text-align: center; color: white;">DRESSES</h1>
+ <div class="gallery">
+        <div class="gallery-item">
+            <img src="images/time11.jpg" width="200" alt="fit 1">
+			
+     </div>
+        <div class="gallery-text">
+            <strong><p>GET SOME DRESSES</p></strong>
+            <p>LOOK SMART</p>
+            <button><a href="what's new.html">Shop Now</a></button>
+        </div>
+	
+        <div class="gallery-item">
+            <img src="images/frnd.jpg" width="200" alt="fit 2">
+			
+        </div>
+    </div>
+
+
+  <div class="back-container-wrapper">
+   <div class="back-containers">
+      <img src="images/dresses.jpg" alt="Dress 1">
+	  <button class="view-button" class="view-btn"onclick="openModal('images/dresses.jpg')">View</button>
+      <p>Long Navy Dress</p>
+      <p>Rayon</p>
+      <p>P235</p>
+	  <button><a href="Order.html">ORDER</a></button>
+   </div>
+   <div class="back-containers">
+      <img src="images/dresses4.jpg" alt="Dress 4">
+	  <button class="view-button" class="view-btn"onclick="openModal('images/dresses4.jpg')">View</button>
+      <p>Brown Flowered Dress</p>
+      <p>Cashmere blends Gucci </p>
+      <p>P350</p>
+	  <button><a href="Order.html">ORDER</a></button>
+   </div>
+   <div class="back-containers">
+      <img src="images/dresses5.jpg" alt="Dress 5">
+	  <button class="view-button" class="view-btn"onclick="openModal('images/dresses5.jpg')">View</button>
+      <p>Brown Big flowered dress</p>
+      <p>Loosy Texture</p>
+      <p>P180</p>
+	  <button><a href="Order.html">ORDER</a></button>
+   </div>
+   <div class="back-containers">
+      <img src="images/dresses6.jpg" alt="Fit 6">
+	  <button class="view-button" class="view-btn"onclick="openModal('images/dresses6.jpg')">View</button>
+      <p>Pink Dress</p>
+      <p>Premium Leather...</p>
+      <p>P1780</p>
+	  <button><a href="Order.html">ORDER</a></button>
+   </div>
+   <div class="back-containers">
+      <img src="images/dresses14.jpg" alt="Fit 7">
+	  <button class="view-button" class="view-btn"onclick="openModal('images/dresses14.jpg')">View</button>
+      <p>White Striped Dress</p>
+      <p>Fluffy texture</p>
+      <p>P180</p>
+	  <button><a href="Order.html">ORDER</a></button>
+   </div>
+</div>
+<div class="back-more-container-wrapper">
+<div class="back-more-container">
+   <h3>ABOUT US</h3>
+   <img src="images/dresses17.jpg" width="200" alt="Ad 1">
+   <p>Candy Clothing is a global online platform for styling. <a href="AboutUs.html">Learn more</a></p>
+</div>
+
+<div class="back-more-container">
+   <h2>About Candy Clothing</h2>
+   <p>Candy Clothing is the online platform for providing <em>customers</em> with style inspiration and fashion discovery.
+     We are driven to be the local leading fashion boutique, providing our customers with a strong perspective.
+     We don't do fashion like anyone else does fashion. Our Candy Clothing Brands, created by our Candy design team, 
+    look between the lines to bring you the freshest clothing, shoes, accessories and gifts. When it comes to our curation
+   of brands at Candy, we select the best of those to give you the biggest variety, amazing exclusives and coolest collaborations. 
+   And in case that wasn't enough, we've also got a range of first-rate Face + Body products you can expressyourself with, too. There 
+   are no rules – just endless ways to be you.</p>
+</div>
+
+
+<div class="back-more-container">
+   <h3>WHAT'S NEW</h3>
+   <img src="images/dresses11.jpg" width="200" alt="Ad 3">
+   <p>Get the best deals offer. <a href="#">Check Offer</a></p>
+</div>
+</div>
+
+<div class="back-another-container-wrapper">
+ <div class="back-another-container">
+            <img src="images/females1.jpg"  width="200" alt="fit 4">
+			<button class="view-button" class="view-btn"onclick="openModal('images/females1.jpg')">View</button>
+            <strong><p>Red dress</p></strong>
+            <p>Silk made</p>
+            <strong><p>P350</p></strong>
+			<button><a href="Order.html">ORDER</a></button>
+		</div>
+        
+        <div class="back-another-container">
+            <img src="images/dresses16.jpg" width="200" alt="fit 5">
+			<button class="view-button" class="view-btn"onclick="openModal('images/dresses16.jpg')">View</button>
+            <strong><p>Creamy long dress</p></strong>
+            <p>SEE through cloth</p>
+            <strong><p>P180</p></strong>
+			<button><a href="Order.html">ORDER</a></button>
+        </div>
+        
+        <div class="back-another-container">
+            <img src="images/dresses8.jpg" width="200" alt="fit 6">
+			<button class="view-button" class="view-btn"onclick="openModal('images/dresses8.jpg')">View</button>
+            <strong><p>Orange long dress</p></strong>
+            <p>Premium linen...</p>
+            <strong><p>P180</p></strong>
+			<button><a href="Order.html">ORDER</a></button>
+        </div>
+        
+        <div class="back-another-container">
+            <img src="images/dresses10.jpg"  width="200"alt="fit 7">
+			<button class="view-button" class="view-btn"onclick="openModal('images/dresses10.jpg')">View</button>
+            <strong><p>Gree-Blue Flowered dress</p></strong>
+            <p>Satin glossy Frabic</p>
+            <strong><p>P180</p></strong>
+			<button> BUY</button>
+        </div>
+        
+        <div class="back-another-container">
+            <img src="images/dresses15.jpg" width="200"alt="fit 8">
+			<button class="view-button" class="view-btn"onclick="openModal('images/dresses15.jpg')">View</button>
+            <strong><p>Crepe</p></strong>
+            <p>Drapey fabric....</p>
+            <strong><p>P280</p></strong>
+			<button><a href="Order.html">ORDER</a></button>
+        </div>
+		
+		<div class="back-another-container">
+		<img src="images/dresses.jpg" width="200" alt="bag">
+		<button class="view-button" class="view-btn"onclick="openModal('images/dresses.jpg')">View</button>
+		<p>Dark Navy Linen</p>
+		<strong><p>P239</p></strong>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		</div>
+		
+		<div class="back-another-container-wrapper">
+		<div class="back-another-container">
+		<img src="images/dresses9.jpg" width="300" alt="sport2">
+		<button class="view-button" class="view-btn"onclick="openModal('images/dresses9.jpg')">View</button>
+		<p>Brown long dress</p>
+		<em><p>P234</p></em>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/dresses6.jpg" width="200" alt="sport3">
+		<button class="view-button" class="view-btn"onclick="openModal('images/dresses6.jpg')">View</button>
+		<p>Pinnk long dress</p>
+		<p>P154</P>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/dresses3.jpg" width="300" alt="dresses3">
+		<button class="view-button" class="view-btn"onclick="openModal('images/dresses3.jpg')">View</button>
+		<p>Linen long dress</p>
+		<p>P143</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/dresses8.jpg" width="300" alt="dresses8">
+		<button class="view-button" class="view-btn"onclick="openModal('images/dresses8.jpg')">View</button>
+		<p>Orange Long dress</p>
+		<p>P125</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/new1.jpg" width="300" alt="new">
+		<button class="view-button" class="view-btn"onclick="openModal('images/new1.jpg')">View</button>
+		<p>Black dress top</p>
+		<p>P100</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/dresses.jpg" width="300" alt="dresses">
+		<button class="view-button" class="view-btn"onclick="openModal('images/dresses.jpg')">View</button>
+		<p>Navy Blue Dress</p>
+		<p>P123</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		</div>
+		
+		<div class="back-another-container-wrapper">
+		<div class="back-another-container">
+		<img src="images/sport12.jpg" width="300" alt="sport12">
+		<button class="view-button" class="view-btn"onclick="openModal('images/sport12.jpg')"> View</button>
+		<p>White-green dress</p>
+		<p>P253</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/time.jpg" width="300" alt="time">
+		<button class="view-button" class="view-btn"onclick="openModal('images/time.jpg')">View</button>
+		<p>Wedding Dress</p>
+		<p>P750</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/time1.jpg" width="300" alt="time1">
+		<button class="view-button" class="view-btn"onclick="openModal('images/time1.jpg')"> View</button>
+		<p>Black Slimy dress</p>
+		<p>P167</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/time3.jpg" width="300" alt="time3">
+		<button class="view-button" class="view-btn"onclick="openModal('images/time3.jpg')">View</button>
+		<p>Blue-green dress</p>
+		<p>P198</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/time4.jpg" width="300" alt="time4">
+		<button class="view-button" class="view-btn"onclick="openModal('images/time4.jpg')"> View</button>
+		<p>Red dress+  carry on bag </p>
+		<p>P323</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/time11.jpg" width="300" alt="time11">
+		<button class="view-button" class="view-btn"onclick="openModal('images/time11.jpg')">View</button>
+		<p>BLUE LONG DRESS</p>
+		<p>P156</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		</div>
+		
+		<div class="back-another-container-wrapper">
+		<div class="back-another-container">
+		<img src="images/time5.jpg" width="300" alt="dresses11">
+		<button class="view-button" class="view-btn"onclick="openModal('images/time5.jpg')">View</button>
+		<p>PURPLE LACE DRESS</p>
+		<p>P145</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/dresses6.jpg" width="300" alt="Dresses6">
+		<button class="view-button" class="view-btn"onclick="openModal('images/dresses6.jpg')">View</button>
+		<p>Culture pink dress</p>
+		<p>P255</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/time7.jpg" width="300" alt="time7">
+		<button class="view-button" class="view-btn"onclick="openModal('images/time7.jpg')">View</button>
+		<p>Red long dress</p>
+		<p>P155</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/time8.jpg" width="300" alt="time8">
+		<button class="view-button" class="view-btn"onclick="openModal('images/time8.jpg')"> View</button>
+		<p>WHITE DRESS</p>
+		<p>P200</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/time9.jpg" width="300" alt="time9">
+		<button class="view-button" class="view-btn"onclick="openModal('images/time9.jpg')">View</button>
+		<p>Green skirt</p>
+		<p>P155</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/time10.jpg" width="300" alt="time10">
+		<button class="view-button" class="view-btn"onclick="openModal('images/time10.jpg')">View</button>
+		<p>Black lacy dress</p>
+		<p>P200</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="back-another-container">
+		<img src="images/time11.jpg" width="300" alt="time11">
+		<button class="view-button" class="view-btn"onclick="openModal('images/time11.jpg')">View</button>
+		<p>Blue dress</p>
+		<p>P200</p>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+    </div>
+	
+	<div class="hero-gallery">
+  <div class="gallery-item">
+    <img src="images/time2.jpg" alt="Sport inspiration">
+	
+  </div>
+  <div class="gallery-text">
+    <strong><p>GET SOME INSPIRATION</p></strong>
+    <p>WE WILLING FOR GIVVING MORE</p>
+    <button class="shop-now"><a href="what's new.html">Shop Now</a></button>
+  </div>
+  <div class="gallery-item">
+    <img src="images/time4.jpg" alt="time4">
+	
+  </div>
+</div>
+
+<div class="back-another-container-wrapper">
+<div class="gallery-another-container">
+		<img src="images/time10.jpg" width="200" alt="time10">
+		<button class="view-button" class="view-btn"onclick="openModal('images/time10.jpg')">View</button>
+		<p>BLACK DRESS</p>
+		<strong><p>P139</p></strong>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="gallery-another-container">
+		<img src="images/dresses14.jpg" width="200" alt="dresses14">
+		<button class="view-button" class="view-btn"onclick="openModal('images/dresses14.jpg')">View</button>
+		<p>White black striped dress</p>
+		<strong><p>P139</p></strong>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="gallery-another-container">
+		<img src="images/dresses9.jpg" width="200" alt="dresses9">
+		<button class="view-button" class="view-btn"onclick="openModal('images/dresses9.jpg')">View</button>
+		<p>Brown Dress</p>
+		<strong><p>P179</p></strong>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="gallery-another-container">
+		<img src="images/time7.jpg" width="200" alt="time7">
+		<button class="view-button" class="view-btn"onclick="openModal('images/time7.jpg')">View</button>
+		<p>red dress</p>
+		<strong><p>P139</p></strong>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+		
+		<div class="gallery-another-container">
+		<img src="images/females1.jpg" width="200" alt="females1">
+		<button class="view-button" class="view-btn"onclick="openModal('images/females1.jpg')">View</button>
+		<p>	RED DRESS</p>
+		<strong><p>P239</p></strong>
+		<button><a href="Order.html">ORDER</a></button>
+		</div>
+</div>
+</div>
+<div id="imageModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="">
+    <p id="modalTitle"></p>
+    <p id="modalPrice"></p>
+  </div>
+</div>
+
+
+<footer class="foot-footer">
+   <p>© 2025 Candy Clothing. All rights reserved.</p>
+   <img src="images/facebook.jpg" width="24">
+		<img src="images/instagram.jpg" width="24">
+		<img src="images/twitter.jpg" width="24">
+</footer>
+<script src="js/script.js"></script>
+
+</body>
+</html>
