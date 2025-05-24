@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CandyShop | Home</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    
+    header {
+      font-family: Arial, sans-serif;
+      padding: 15px 30px;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    
+    nav ul {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0 15px;
+    }    
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+    
+    nav ul li a:hover {
+      color: #ff6b6b;
+    }
+	 nav ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ff6b6b;
+  }
+  
+    
+    .login-btn {
+      margin-left: auto;
+      padding: 8px 20px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+	  text-decoration: none;
+    }
+	.hero {
+           background-image: url('images/jorda.jpg');
+           background-size: 450px; 
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.4);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: #e83e8c;
+            color: white;
+            padding: 12px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            border: 2px solid #e83e8c;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #e83e8c;
+        }
+        .featured-section {
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
+  
+  .featured-section h3 {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+    padding-bottom: 15px;
+  }
+  
+  .featured-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #ff6b6b;
+  }
+  
+  .featured-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+  }
+  
+  .featured {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .featured:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+  }
+  
+  .featured img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .featured p {
+    padding: 10px 15px;
+    margin: 0;
+    color: #333;
+  }
+  
+  .featured p:first-of-type {
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding-bottom: 5px;
+  }
+  
+  .featured p:last-of-type {
+    color: #ff6b6b;
+    font-weight: 700;
+    padding-top: 0;
+  }
+  
+  .featured button {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 15px auto;
+    padding: 10px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .featured button:hover {
+    background: #ff6b6b;
+  }
+  
+  /* MODAL STYLES */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    text-align: center;
+    position: relative;
+  }
+  
+  .modal img {
+    max-width: 100%;
+    max-height: 400px;
+    margin-bottom: 15px;
+  }
+  
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .featured-container {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .featured-section h3 {
+      font-size: 1.8rem;
+    }
+    
+    .featured-container {
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    
+    .modal-content {
+      max-width: 90%;
+      max-height: 90%;
+    }
+  }
+  
+  footer {
+    text-align: center;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+  }
+  
+  footer img {
+    margin: 0 10px;
+    vertical-align: middle;
+  }
+  .search-bar button {
+   background-color: grey;
+  color: white;
+  margin-top: 4px;
+  border-radius: 3px;
+  }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <div class="search-bar">
+      <input type="text"  id="searchInput" placeholder=" Search males & females products" list="searchSuggestions">
+	  <datalist id="searchSuggestions">
+    <option value="Home">
+    <option value="Shoes">
+    <option value="Males">
+    <option value="Dresses">
+    <option value="Shoes">
+	</datalist>
+	<button onclick="performSearch()">ENTER</button>
+  
+    </div>
+    <select class="currency-selector">
+      <option>ZAR(R)</option>
+      <option>USD($)</option>
+      <option>EUR(€)</option>
+    </select>
+    <a href="login.html" class="login-btn">Log in</a>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="home.html" class="home-page">Home</a></li>
+      <li><a href="what's new.html" class="whatsnew-page">What's New</a></li>
+      <li><a href="sports wear.html" class="sportswear-page">Sports Wear</a></li>
+      <li><a href="clothing.html" class="clothing">Clothing</a></li>
+      <li><a href="dresses.html" class="dresses">Dresses</a></li>  
+      <li><a href="shoes.html" class="shoes-page">Shoes</a></li> 
+      <li><a href="bags.html" class="bags-page>Bags"</a></li>
+      <li><a href="females.html" class="females>Females"</a></li>  
+      <li><a href="males.html" class="males">Males</a></li> 
+    </ul>
+  </nav>
+</header>
+ <h1 style="text-align: center;">HOME PAGE</h1>
+<section class="hero" id="home">
+  <div class="hero-content">
+    <h1>Dripy Collection 2025</h1>
+    <p>Discover the latest trends in fashion with our exclusive summer collection</p>
+    <a href="what's new.html" class="btn">Shop Now</a>
+  </div>
+</section>
+
+<section class="featured-section">
+  <h3>Featured</h3>
+  <div class="featured-container">
+    <!-- Product 1 -->
+    <div class="featured">
+      <img src="images/shoe9.jpg" alt="BLACK-RED AIR FORCE">
+      <p>BLACK-RED AIR FORCE</p>
+      <p>P789</p>
+      <button class="view-button" onclick="openModal('images/shoe9.jpg', 'BLACK-RED AIR FORCE', 'P789')">VIEW</button>
+    </div>
+    
+    <!-- Product 2 -->
+    <div class="featured">
+      <img src="images/fit12.jpg" alt="CAT-COAT">
+      <p>CAT COAT</p>
+      <p>P789</p>
+      <button class="view-button" onclick="openModal('images/fit12.jpg', 'CAT COAT', 'P789')">VIEW</button>
+    </div>
+    
+    <!-- Product 3 -->
+    <div class="featured">
+      <img src="images/sport2.jpg" alt="white golf skirt">
+      <p>white golf skirt</p>
+      <p>P289</p>
+      <button class="view-button" onclick="openModal('images/sport2.jpg', 'white golf skirt', 'P289')">VIEW</button>
+    </div>
+    
+    <!-- Product 4 -->
+    <div class="featured">
+      <img src="images/new19.jpg" alt="Nike TN">
+      <p>Nike TN</p>
+      <p>P2789</p>
+      <button class="view-button" onclick="openModal('images/new19.jpg', 'Nike TN', 'P2789')">VIEW</button>
+    </div>
+    
+    <!-- Product 5 -->
+    <div class="featured">
+      <img src="images/yen.jpg" alt="NikeSport cap">
+      <p>NikeSport cap</p>
+      <p>P389</p>
+      <button class="view-button" onclick="openModal('images/yen.jpg', 'NikeSport cap', 'P389')">VIEW</button>
+    </div>
+    
+    <!-- Product 6 -->
+    <div class="featured">
+      <img src="images/time2.jpg" alt="RED COLORED DRESS">
+      <p>RED COLOURED DRESS</p>
+      <p>P189</p>
+      <button class="view-button" onclick="openModal('images/time2.jpg', 'RED COLOURED DRESS', 'P189')">VIEW</button>
+    </div>
+    
+    <!-- Product 7 -->
+    <div class="featured">
+      <img src="images/cap2.jpg" alt="A'S CAP">
+      <p>A'S FLAT CAP</p>
+      <p>P289</p>
+      <button class="view-button" onclick="openModal('images/cap2.jpg', 'A\'S FLAT CAP', 'P289')">VIEW</button>
+    </div>
+    
+    <!-- Product 8 -->
+    <div class="featured">
+      <img src="images/new5.jpg" alt="NIKE TN">
+      <p>NIKE TN</p>
+      <p>P2189</p>
+      <button class="view-button" onclick="openModal('images/new5.jpg', 'NIKE TN', 'P2189')">VIEW</button>
+    </div>
+    
+    <!-- Product 9 -->
+    <div class="featured">
+      <img src="images/fit.jpg" alt="REDBAT TOP">
+      <p>REDBAT TOP</p>
+      <p>P389</p>
+      <button class="view-button" onclick="openModal('images/fit.jpg', 'REDBAT TOP', 'P389')">VIEW</button>
+    </div>
+    
+    <!-- Product 10 -->
+    <div class="featured">
+      <img src="images/two.jpg" alt="TWO PIECED MATCH">
+      <p>TWO PIECE MATCH</p>
+      <p>P489 FOR EACH</p>
+      <button class="view-button" onclick="openModal('images/two.jpg', 'TWO PIECE MATCH', 'P489 FOR EACH')">VIEW</button>
+    </div>
+  </div>
+</section>
+
+<!-- Modal Structure -->
+<div id="imageModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="">
+    <p id="modalTitle"></p>
+    <p id="modalPrice"></p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Candy's Boutique. All rights reserved.</p>
+  <img src="images/facebook.jpg" width="24">
+  <img src="images/instagram.jpg" width="24">
+  <img src="images/twitter.jpg" width="24">
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
