@@ -345,8 +345,17 @@ header {
   margin-top: 4px;
   border-radius: 3px;
   }
-  @media (max-width: 1024px) {
-  body {
-    font-size: 16px;
-    padding: 10px;
-  }
+ 
+@media (max-width: 600px) {
+  body { font-size: 15px; }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  body { font-size: 19px; }
+}
+
+
+@media (min-width: 1025px) {
+  body { font-size: 20px; }
+}
