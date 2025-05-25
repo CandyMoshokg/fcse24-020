@@ -123,3 +123,17 @@ document.getElementById('searchInput').addEventListener('keypress', function(e) 
     performSearch();
   }
 });
+
+
+
+
+
+
+
+
+
+function doPost(e) {
+  const data = JSON.parse(e.postData.contents);
+  MailApp.sendEmail("candymoshokgo2@gmail.com", "New Form Submission", JSON.stringify(data));
+  return ContentService.createTextOutput("Success");
+}
