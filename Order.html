@@ -131,7 +131,7 @@
 	       <input type="hidden" name="_captcha" value="false">
                <input type="hidden" name="_template" value="table">
               <input type="hidden" name="_subject" value="New Order Submission">
-              <input type="hidden" name="_next" value="https://yourwebsite.com/thank-you.html">
+              <input type="hidden" name="_next" value="https://CandyMoshokg.com/thank-you.html">
          <div class="form-group">
 		 <h1><em>YOUR ORDER</em></h1>
             <label for="fullname">Full Name</label>
@@ -160,7 +160,13 @@
 		 
 		 <div class="form-group">
             <label for="item size">Item size</label>
-            <input type="size" id="item size" name="item size" required placeholder="Small/Medium/Large/xxLarge">
+            <select id="itemsize" name="itemsize" required>
+        <option value="" disabled selected>Select size</option>
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+        <option value="XXLarge">XXLarge</option>
+      </select>
          </div>
 		 
          <button type="submit">SUBMIT</button>
