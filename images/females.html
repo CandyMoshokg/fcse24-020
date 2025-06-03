@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>CandyShop | Home</title>
+   <link rel="stylesheet" href="style.css">
+   <style>
+
+.hero-gallery {
+       display: flex;
+       justify-content: center;
+       gap: 10px;
+       padding: 1px;
+       background-color: #f0f0f0;
+	   width: 80%;
+	   margin: 10px;
+	   border-radius: 15px;
+	   margin-left: 250px;
+	   margin-bottom: 100px;
+     }
+     
+     .gallery-item {
+       flex: 1;
+       max-width: 400px;
+     }
+     
+     .gallery-item img {
+       width: 100%;
+       height: auto;
+       border-radius: 15px;
+     }
+     
+     .gallery-text {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+     }
+     
+     .gallery-text button {
+       margin-top: 15px;
+       padding: 10px 20px;
+       background-color: #333;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+     }
+    .gallery-text button a {
+	color: white;
+	text-decoration: none;
+	}
+	.gallery-containers-wrapper button {
+	color: white;
+	background-color: #333;
+	margin-left: 40px;
+	}
+	.gallery-containers-wrapper a {
+	color: white;
+	text-decoration: none;
+	}
+	 .foot-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0; 
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+}
+   </style>
+</head>
+<body>
+<header>
+<div class="header-top">
+    <div class="search-bar">
+      <input type="text"  id="searchInput" placeholder=" Search males & females products" list="searchSuggestions">
+	  <datalist id="searchSuggestions">
+    <option value="Home">
+    <option value="Shoes">
+    <option value="Males">
+    <option value="Dresses">
+    <option value="Shoes">
+	</datalist>
+	<button onclick="performSearch()">Enter</button>
+	</div>
+    <select class="currency-selector">
+      <option>ZAR(R)</option>
+      <option>USD($)</option>
+      <option>EUR(€)</option>
+    </select>
+    <a href="login.html" class="login-btn">Log in</a>
+  </div>
+ <nav>
+         <ul>
+		     <li><a href="index.html">Home</a></li>
+            <li><a href="what's-new.html">what's new</a></li>
+            <li><a href="sports-wear.html">Sports wear</a></li>
+            <li><a href="clothing.html">clothing</a></li>
+            <li><a href="dresses.html">Dresses</a></li>  
+           <li><a href="shoes.html">Shoes</a></li> 
+              <li><a href="bags.html">Bags</a></li>
+            <li><a href="females.html">Females</a></li>  
+          <li><a href="males.html">Males</a></li> 
+         </ul>
+      </nav>
+</header>
+   <h1 style="text-align: center;">FEMALES</h1>
+    <div class="hero-gallery">
+        <div class="gallery-item">
+            <img src="images/females.jpg" width="200" alt="females">
+     </div>
+        <div class="gallery-text">
+            <strong><p>GET SOME INSPIRATION</p></strong>
+            <p>What Are You Looking For?</p>
+            <button class="shop-now"><a href="what's new.html">AVAILABLE NOW</a></button>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/dresses14.jpg" width="200" alt="dresses14">
+        </div>
+</div>
+
+<div class="gallery-containers-wrapper">
+        <div class="gallery-container">
+                <img src="images/dresses16.jpg" width="150" alt="dresses16">
+				<button class="view-button" class="view-btn"onclick="openModal('images/dresses16.jpg')">View</button>
+              <strong><p>Creamy skirt</p></strong>
+  <p>Premium Silk.... long last</p>
+   <em>Come with free handbag</em>
+<strong><p>P280</p></strong>
+<button><a href="Order.html">PLACE AN ORDER</a></button>
+            </div>
+  
+        <div class="gallery-container">
+                <img src="images/dresses10.jpg" width="150" alt="dresses10">
+				<button class="view-btn" class="view-btn"onclick="openModal('images/dresses10.jpg')">View</button>
+ <strong><p>Coloured dress</p></strong>
+  <p>long Silk</p>
+<strong><p>P150</p></strong>
+<button><a href="Order.html">PLACE AN ORDER</a></button>
+          </div>
+   
+        <div class="gallery-container">
+                <img src="images/dresses15.jpg" width="150" alt="dresses15">
+				<button class="view-btn" class="view-btn"onclick="openModal('images/dresses15.jpg')">View</button>
+ <strong><p>Black flowered dress</p></strong>
+  <p>silk made</p>
+<strong><p>P180</p></strong>
+<button><a href="Order.html">PLACE AN ORDER</a></button>
+            </div>
+
+        <div class="gallery-container">
+                <img src="images/dresses12.jpg" width="150" alt="dresses12">
+				<button class="view-btn" class="view-btn"onclick="openModal('images/dresses12.jpg')">View</button>
+ <strong><p>long last</p></strong>
+  <p>Silk made</p>
+<strong><p>P180</p></strong>
+<button><a href="Order.html">PLACE AN ORDER</a></button>
+            </div>
+      
+        <div class="gallery-container">
+                <img src="images/dresses6.jpg" width="150" alt="dresses6">
+				<button class="view-btn" class="view-btn"onclick="openModal('images/dresses6.jpg')">View</button>
+ <strong><p>Pink Dress</p></strong>
+  <p>Twisted silk</p>
+<strong><p>P180</p></strong>
+<button><a href="Order.html">PLACE AN ORDER</a></button>
+            </div>
+   
+        <div class="gallery-container">
+            <img src="images/dresses11.jpg" width="150" alt="dresses11">
+			<button class="view-btn" class="view-btn"onclick="openModal('images/dresses11.jpg')">View</button>
+ <strong><p>Colored flowered long dress</p></strong>
+  <p>Shiny silk</p>
+<strong><p>P180</p></strong>
+<button><a href="Order.html">PLACE AN ORDER</a></button>
+        </div>
+</div>
+<div id="imageModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="">
+    <p id="modalTitle"></p>
+    <p id="modalPrice"></p>
+  </div>
+</div>
+
+
+<footer class="foot-footer">
+    <p>© 2025 Candy Clothing. All rights reserved.</p>
+	<img src="images/facebook.jpg" width="24">
+		<img src="images/instragram.jpg" width="24">
+		<img src="images/twitter.jpg" width="24">
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
