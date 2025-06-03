@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CandyShop | Home</title>
+    <link rel="stylesheet" href="style.css">
+	<style>
+	
+.hero-gallery {
+       display: flex;
+       justify-content: center;
+       gap: 10px;
+       padding: 1px;
+       background-color: #f0f0f0;
+	   width: 80%;
+	   margin: 10px;
+	   border-radius: 15px;
+	   margin-left: 250px;
+	   margin-bottom: 100px;
+     }
+     
+     .gallery-item {
+       flex: 1;
+       max-width: 400px;
+     }
+     
+     .gallery-item img {
+       width: 100%;
+       height: auto;
+       border-radius: 15px;
+     }
+     
+     .gallery-text {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+       text-align: center;
+     }
+     
+     .gallery-text button {
+       margin-top: 15px;
+       padding: 10px 20px;
+       background-color: #333;
+       color: white;
+       border: none;
+       border-radius: 5px;
+       cursor: pointer;
+     }
+    .gallery-text button a {
+	color: white;
+	text-decoration: none;
+	}
+	.gallery-containers-wrapper button {
+	color: white;
+	background-color: #333;
+	margin-left: 40px;
+	}
+	.gallery-containers-wrapper a {
+	color: white;
+	text-decoration: none;
+	}
+	 .foot-footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0; 
+    margin-top: auto;
+    width: 100%;
+    text-align: center;
+    border-radius: 15px;
+}
+	</style>
+	<head>
+<body>
+<header>
+    <div class="header-top">
+    <div class="search-bar">
+      <input type="text"  id="searchInput" placeholder=" Search males & females products" list="searchSuggestions">
+	  <datalist id="searchSuggestions">
+    <option value="Home">
+    <option value="Shoes">
+    <option value="Males">
+    <option value="Dresses">
+    <option value="Shoes">
+	</datalist>
+	<button onclick="performSearch()">Enter</button>
+	</div>
+	
+    <select class="currency-selector">
+      <option>ZAR(R)</option>
+      <option>USD($)</option>
+      <option>EUR(€)</option>
+    </select>
+    <a href="login.html" class="login-btn">Log in</a>
+  </div>
+    <nav>
+        <ul>
+		    <li><a href="index.html">Home</a></li>
+            <li><a href="what's-new.html">What's New</a></li>
+            <li><a href="sports-wear.html">Sports Wear</a></li>
+            <li><a href="clothing.html">Clothing</a></li>
+            <li><a href="dresses.html">Dresses</a></li>
+            <li><a href="shoes.html">Shoes</a></li>
+            <li><a href="bags.html">Bags</a></li>
+            <li><a href="females.html">Females</a></li>
+            <li><a href="males.html">Males</a></li>
+        </ul>
+    </nav>
+</header>
+ <h1 style="text-align: center;">MALES</h1>
+<div class="hero-gallery">
+    <div class="gallery-item">
+        <img src="images/males7.jpg" width="200" alt="males7">
+    </div>
+    <div class="gallery-text">
+        <strong><p>LETS POP GENTS</p></strong>
+        <p>What Are You Looking For?</p>
+        <button class="shop-now"><a href="what's new.html">AVAILABLE!!!</a></button>
+    </div>
+    <div class="gallery-item">
+        <img src="images/males1.jpg" width="200" alt="males1">
+    </div>
+</div>
+
+<div class="gallery-containers-wrapper">
+    <div class="gallery-container">
+        <img src="images/males2.jpg" width="150" alt="males2">
+		<button class="view-btn" class="view-btn"onclick="openModal('images/males2.jpg')">View</button>
+        <strong><p>TWO PIECE TRACKSUIT</p></strong>
+        <p>Cotton Made</p>
+        <em><p>WARM AND DURABLE</p></em>
+        <strong><p>P780</p></strong>
+		<button><a href="Order.html">PLACE AN ORDER</a></button>
+    </div>
+    <div class="gallery-container">
+        <img src="images/males3.jpg" width="150" alt="males3">
+		<button class="view-btn" class="view-btn"onclick="openModal('images/males3.jpg')">View</button>
+        <strong><p>CULTURE OUTFITS</p></strong>
+        <p>WARM & STUNNING</p>
+        <strong><p>P1350</p></strong>
+		<button><a href="Order.html">PLACE AN ORDER</a></button>
+    </div>
+    <div class="gallery-container">
+        <img src="images/males4.jpg" width="150" alt="males4">
+		<button class="view-btn" class="view-btn"onclick="openModal('images/males4.jpg')">View</button>
+        <strong><p>GREY SUIT</p></strong>
+        <p>DURABLE AND CALMSY</p>
+        <strong><p>P1780</p></strong>
+		<button><a href="Order.html">PLACE AN ORDER</a></button>
+    </div>
+    <div class="gallery-container">
+        <img src="images/males5.jpg" width="150" alt="males5">
+		<button class="view-btn" class="view-btn"onclick="openModal('images/males5.jpg')">View</button>
+        <strong><p>CULTURE WEDDING FIT</p></strong>
+        <p>2 PIECE WHITE-BLUE</p>
+        <strong><p>P780</p></strong>
+		<button><a href="Order.html">PLACE AN ORDER</a></button>
+    </div>
+    <div class="gallery-container">
+        <img src="images/males7.jpg" width="150" alt="males7">
+		<button class="view-btn" class="view-btn"onclick="openModal('images/males7.jpg')">View</button>
+        <strong><p>Classic oufit</p></strong>
+        <p>Culturally made </p>
+        <strong><p>P980</p></strong>
+		<button><a href="Order.html">PLACE AN ORDER</a></button>
+    </div>
+    <div class="gallery-container">
+        <img src="images/males8.jpg" width="150" alt="males8">
+		<button class="view-btn" class="view-btn"onclick="openModal('images/males8.jpg')">View</button>
+        <strong><p>MENS SUIT</p></strong>
+        <p>COMBINATION OF TWO DIFFER SUIT</p>
+        <strong><p>P1680</p></strong>
+		<button><a href="Order.html">PLACE AN ORDER</a></button>
+    </div>
+</div>
+<div id="imageModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="">
+    <p id="modalTitle"></p>
+    <p id="modalPrice"></p>
+  </div>
+</div>
+
+<footer class="foot-footer">
+    <p>© 2025 Candy Clothing. All rights reserved.</p>
+	<img src="images/facebook.jpg" width="24">
+		<img src="images/instragram.jpg" width="24">
+		<img src="images/twitter.jpg" width="24">
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>

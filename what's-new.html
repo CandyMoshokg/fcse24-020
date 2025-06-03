@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CandyShop | Home</title>
+	<link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        
+        
+        .New-container {
+            max-width: 1900px;
+            margin: 30px auto;
+            padding: 10px 50px;
+            border-radius: 15px;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .New-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 45px;
+            margin: 100px;
+        }
+        
+        .New-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .New-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+        
+        .New-card img {
+            width: 90%;
+            height: 250px;
+            object-fit: cover;
+            border-bottom: 1px solid #eee;
+            border-radius: 20px;
+            margin: 10px;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+		.New-card button {
+		 background-color: #333;
+		 margin-left: 80px;
+		}
+        .view-btn {
+		color: white;
+		padding: 5px;
+		border-radius: 10px;
+		}
+        .New-info {
+            padding: 15px;
+        }
+        
+        .New-info h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        
+        .New-info p {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+        }
+        .New-info button {
+		background-color: #333;
+		margin-left: 40px;
+		border-radius: 10px;
+		}
+		.New-info button a {
+		color: white;
+		text-decoration: none;
+		margin-left: 35px;
+		padding: 6px;
+		
+		}
+        .New-price {
+            font-weight: bold;
+            color: #ff6b9d;
+            font-size: 1.1rem;
+        }
+        
+       
+        
+        
+        
+		.gallery-text h2 {
+		margin-top: 120px;
+		}
+        .gallery-text p{
+		color: black;
+		margin-top: 20px;
+		
+		}
+		.gallery-text button{
+		background-color: #333;
+		height: 50px;
+		margin-top: 90px;
+		border: none;
+		padding: 10px;
+		border-radius: 15px;
+	
+		}
+	    .gallery-text button a {
+		color: white;
+		text-decoration: none;
+		font-weight: bold;
+		}
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-gallery {
+                flex-direction: column;
+            }
+            
+            .gallery-item {
+                max-width: 100%;
+                margin-bottom: 20px;
+            }
+        .New-info button {
+            background-color: orange;
+            margin-left: 90px;
+            width: 30%;
+            height: 8%;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        
+      
+        #NewModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 1000;
+            text-align: center;
+        }
+        
+        .modal-content {
+            display: inline-block;
+            margin: 50px auto;
+            max-width: 80%;
+            max-height: 80%;
+        }
+        
+        #modalImage {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+        }
+        
+        #captionNew {
+            color: white;
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        
+        .exit {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .exit:hover {
+            color: #ff6b9d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+	 <div class="header-top">
+    <div class="search-bar">
+      <input type="text"  id="searchInput" placeholder=" Search males & females products" list="searchSuggestions">
+	  <datalist id="searchSuggestions">
+    <option value="Home">
+    <option value="Shoes">
+    <option value="Males">
+    <option value="Dresses">
+    <option value="Shoes">
+	</datalist>
+	<button onclick="performSearch()">Enter</button>
+	</div>
+    <select class="currency-selector">
+      <option>ZAR(R)</option>
+      <option>USD($)</option>
+      <option>EUR(€)</option>
+    </select>
+    <a href="login.html" class="login-btn">Log in</a>
+  </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="what's-new.html">What's New</a></li>
+                <li><a href="sports-wear.html">Sports Wear</a></li>
+                <li><a href="clothing.html">Clothing</a></li>
+                <li><a href="dresses.html">Dresses</a></li>  
+                <li><a href="shoes.html">Shoes</a></li> 
+                <li><a href="bags.html">Bags</a></li>
+                <li><a href="females.html">Females</a></li>  
+                <li><a href="males.html">Males</a></li> 
+            </ul>
+        </nav>
+    </header>
+     <h1 style="text-align: center;">What's New</h1>
+    <div class="New-container">
+        <div class="New-grid">
+            <div class="New-card">
+                <img src="images/fit4.jpg" width="200" alt="Black striped track">
+                <button class="view-btn" class="view-btn"onclick="openModal('images/fit4.jpg')">View</button>
+                <div class="New-info">
+                    <h3>Black striped track</h3>
+                    <p>Cashmere blends Gucci track</p>
+                    <p class="New-price">P350</p>
+                    <button><a href="Order.html">PLACE AN ORDER</a></button>
+                </div>
+            </div>
+            
+            <div class="New-card">
+                <img src="images/fit5.jpg" width="200" alt="Lacoste sneaker">
+                <button class="view-btn" class="view-btn"onclick="openModal('images/fit5.jpg')">View</button>
+                <div class="New-info">
+                    <h3>Lacoste white-green sneaker</h3>
+                    <p>Hard leather edged</p>
+                    <p class="New-price">P1780</p>
+                    <button><a href="Order.html">PLACE AN ORDER</a></button>
+                </div>
+            </div>
+            
+            <div class="New-card">
+                <img src="images/fit6.jpg" width="200" alt="Yellow cat coat">
+                <button class="view-btn" class="view-btn"onclick="openModal('images/fit6.jpg')">View</button>
+                <div class="New-info">
+                    <h3>Yellow Cat Coat</h3>
+                    <p>Linen Made</p>
+                    <p class="New-price">P780</p>
+                    <button><a href="Order.html">PLACE AN ORDER</a></button>
+                </div>
+            </div>
+            
+            <div class="New-card">
+                <img src="images/fit7.jpg" width="200" alt="NIKEY SNEAKER">
+                <button class="view-btn" class="view-btn"onclick="openModal('images/fit7.jpg')">View</button>
+                <div class="New-info">
+                    <h3>NIKEY SNEAKER</h3>
+                    <p>Premium leather</p>
+                    <p class="New-price">P980</p>
+                    <button><a href="Order.html">PLACE AN ORDER</a></button>
+                </div>
+            </div>
+            
+            <div class="New-card">
+                <img src="images/fit8.jpg" width="200" alt="Customized Air force">
+                <button class="view-btn" class="view-btn"onclick="openModal('images/fit8.jpg')">View</button>
+                <div class="New-info">
+                    <h3>Customized Air force</h3>
+                    <p>Premium leather</p>
+                    <p class="New-price">P780</p>
+                    <button><a href="Order.html">PLACE AN ORDER</a></button>
+                </div>
+            </div>
+            
+            <div class="New-card">
+                <img src="images/bag.jpg" width="200" alt="White Louis Vuitton">
+                <button class="view-btn" class="view-btn"onclick="openModal('images/bag.jpg')">View</button>
+                <div class="New-info">
+                    <h3>WHITE LOUIS VUITTON</h3>
+                    <p>Luxury handbag</p>
+                    <p class="New-price">P239</p>
+                    <button><a href="Order.html">PLACE AN ORDER</a></button>
+                </div>
+            </div>
+            
+            <div class="New-card">
+                <img src="images/females.jpg" width="200" alt="RED SKIRT">
+                <button class="view-btn" class="view-btn"onclick="openModal('images/females.jpg')">View</button>
+                <div class="New-info">
+                    <h3>RED SKIRT</h3>
+                    <p>Luxury handbag</p>
+                    <p class="New-price">P239</p>
+                    <button><a href="Order.html">PLACE AN ORDER</a></button>
+                </div>
+            </div>
+          
+            <div class="New-card">
+                <img src="images/new1.jpg" width="200" alt="BLACK LOUIS VUITTON">
+                <button class="view-btn" class="view-btn"onclick="openModal('images/new1.jpg')">View</button>
+                <div class="New-info">
+                    <h3>BLACK LOUIS VUITTON+TOP</h3>
+                    <p>Luxury handbag</p>
+                    <p class="New-price">P239</p>
+                    <button><a href="Order.html">PLACE AN ORDER</a></button>
+                </div>
+            </div>
+		  
+            <div class="New-card">
+                <img src="images/males.jpg" width="200" alt="Stripped trouser">
+                <button class="view-btn" class="view-btn"onclick="openModal('images/males.jpg')">View</button>
+                <div class="New-info">
+                    <h3>Striped trouser</h3>
+                    <p>with pair of white shoes</p>
+                    <p class="New-price">P839</p>
+                    <button><a href="Order.html">PLACE AN ORDER</a></button>
+                </div>
+            </div>
+		  
+            <div class="New-card">
+                <img src="images/shoe11.jpg" width="200" alt="RED-WHITE CUSTOMIZED AF1">
+                <button class="view-btn" class="view-btn"onclick="openModal('images/shoe11.jpg')">View</button>
+                <div class="New-info">
+                    <h3>RED-WHITE CUSTOMIZED AF1</h3>
+                    <p>DURABLE</p>
+                    <p class="New-price">P939</p>
+                    <button><a href="Order.html">PLACE AN ORDER</a></button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-gallery">
+            <div class="gallery-item">
+                <img src="images/sport5.jpg" alt="Sport inspiration">
+            </div>
+            <div class="gallery-text">
+                <h2>GET SOME SPORTS FITS ALSO</h2>
+                <p>WE ARE COMMITTED TO GIVING YOU MORE</p>
+                <button><a href="sports wear.html">CLICK SPORT</a></button>
+            </div>
+            <div class="gallery-item">
+                <img src="images/sport13.jpg" alt="Sport outfit">
+            </div>
+        </div>
+       
+       
+    </div>
+    
+<div id="imageModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="">
+    <p id="modalTitle"></p>
+    <p id="modalPrice"></p>
+  </div>
+</div>
+
+    <footer>
+        <p>© 2025 Candy Clothing. All rights reserved.</p>
+        <img src="images/facebook.jpg" width="24">
+        <img src="images/instagram.jpg" width="24">
+        <img src="images/twitter.jpg" width="24">
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

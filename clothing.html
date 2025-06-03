@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CandyShop | Home</title>
+    <link rel="stylesheet" href="style.css">
+	<style>
+	body {
+	background-image: url('images/background.jpg');
+	}
+	header h1{
+	 color: #f8f8f8;
+	}
+
+button {
+		background-color: #333;
+		margin-left: 90px;
+		width: 30%;
+		height: 8%;
+		border-radius: 15px;
+		color: white;
+		}
+	button a {
+	color: white;
+	text-decoration: none;
+}	
+  .gallery-text button {
+  background-color: #333;
+  padding: 20px;
+  }
+  .gallery-text button a {
+  color: white;
+  font-weight: bold;
+}
+gallery-containers-wrapper a {
+color: white;
+}
+
+		.inside-containers-wrapper {
+    display: flex;
+    justify-content: space-evenly; 
+    align-items: center; 
+    overflow-x: auto;
+    gap: 1px; 
+    padding: 1px; 
+    width: 95%; 
+    margin: 10px auto; 
+    background-color: #f5f5f5;
+    border-radius: 15px;
+    height: 50%;
+	margin-left: 1px;
+}
+.gallery-container a {
+color: white;
+text-decoration: none;
+font-weight: bold;
+}
+.inside-containers-wrapper h3 {
+color: black;
+margin-left: 50px;
+}
+.inside-containers-wrapper p {
+color: black
+font-family: Arial, sans-serif;
+}
+.inside-container {
+    flex: 0 0 300px;
+    background: white;
+    border-radius: 15px;
+    padding: 2px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    margin-left: 10px;
+	gap: 20px;
+}
+.inside-container h2 {
+color: black;
+}
+.inside-container img {
+    width: 90%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    margin-left: 8px;	
+}
+
+.inside-container p {
+    margin: 8px 0;
+    font-size: 1rem;
+    color: #333;
+	margin-left: 6px;
+}
+.inside-container a {
+color: black;
+font-weight: bold;
+text-decoration: none;
+}
+.inside-container strong {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.inside-container em {
+    color: #666;
+    font-size: 0.9rem;
+    display: block;
+    margin-bottom: 10px;
+}
+footer {
+background-color: #f8f8f8;
+text-align: center;
+}
+	</style>
+</head>
+<body>
+    <header>
+         <div class="header-top">
+    <div class="search-bar">
+      <input type="text"  id="searchInput" placeholder=" Search males & females products" list="searchSuggestions">
+	  <datalist id="searchSuggestions">
+    <option value="Home">
+    <option value="Shoes">
+    <option value="Males">
+    <option value="Dresses">
+    <option value="Shoes">
+	</datalist>
+	<button onclick="performSearch()">Enter</button>
+	</div>
+    <select class="currency-selector">
+      <option>ZAR(R)</option>
+      <option>USD($)</option>
+      <option>EUR(€)</option>
+    </select>
+    <a href="login.html" class="login-btn">Log in</a>
+  </div>
+        <nav>
+            <ul>
+			    <li><a href="index.html">Home</a></li>
+                <li><a href="what's-new.html">what's new</a></li>
+                <li><a href="sports-wear.html">Sports wear</a></li>
+                <li><a href="clothing.html">clothing</a></li>
+                <li><a href="dresses.html">Dresses</a></li>
+                <li><a href="shoes.html">Shoes</a></li>
+                <li><a href="bags.html">Bags</a></li>
+                <li><a href="females.html">Females</a></li>
+                <li><a href="males.html">Males</a></li>
+            </ul>
+        </nav>
+    </header>
+	  <h1 style="text-align: center; color: white;">CLOTHING</h1>
+    <div class="full-width-section">
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="images/fit12.jpg" alt="fit 1">
+        </div>
+        <div class="gallery-text">
+            <strong><p>GET SOME INSPIRATION</p></strong>
+            <p>What Are You Looking For?</p>
+            <button class="shop-now"><a href="what's new.html"><strong>Shop Now</strong></a></button>
+        </div>
+        <div class="gallery-item">
+            <img src="images/fit6.jpg" alt="fit 2">
+        </div>
+    </div>
+
+        <div class="gallery-containers-wrapper">
+        <div class="gallery-container">
+            <img src="images/fit3.jpg" alt="fit 3">
+			<button class="view-button" onclick="openModal('images/fit3.jpg', 'Air force chocolate', 'P1780 FOR EACH')">VIEW</button>
+            <strong><p>Air force chocolate</p></strong>
+            <p>Premium leather....</p>
+            <em><p>chocky double laces</p></em>
+            <strong><p>P1780</p></strong>
+			<button><a href="Order.html">PLACE AN ORDER</a></button>
+        </div>
+        
+        <div class="gallery-container">
+            <img src="images/fit4.jpg" alt="fit 4">
+			<button class="view-button" onclick="openModal('images/fit4.jpg', 'Black striped', 'P350')">VIEW</button>
+            <strong><p>Black striped track</p></strong>
+            <p>Cashmere blends Gucci track</p>
+            <strong><p>P350</p></strong>
+			<button><a href="Order.html">PLACE AN ORDER</a></button>
+        </div>
+        
+        <div class="gallery-container">
+            <img src="images/fit5.jpg" alt="fit 5">
+			<button class="view-btn"onclick="openModal('images/fit5.jpg', 'Lacoste white-green sneaker', 'P1780')">View</button>
+            <strong><p>Lacoste white-green sneaker</p></strong>
+            <p>hard leather edged</p>
+            <strong><p>P1780</p></strong>
+			<button><a href="Order.html">PLACE AN ORDER</a></button>
+        </div>
+        
+        <div class="gallery-container">
+            <img src="images/fit6.jpg" alt="fit 6">
+			<button class="view-btn"onclick="openModal('images/fit6.jpg', 'Air force choclate', 'P1780')">View</button>
+            <strong><p>Air force chocolate</p></strong>
+            <p>Premium leather....</p>
+            <strong><p>P1780</p></strong>
+			<button><a href="Order.html">PLACE AN ORDER</a></button>
+        </div>
+        
+        <div class="gallery-container">
+            <img src="images/fit7.jpg" alt="fit 7">
+			<button class="view-btn" onclick="openModal('images/fit7.jpg')">View</button>
+            <strong><p>Air force chocolate</p></strong>
+            <p>Premium leather</p>
+            <strong><p>P1780</p></strong>
+			<button><a href="Order.html">PLACE AN ORDER</a></button>
+        </div>
+        
+        <div class="gallery-container">
+            <img src="images/fit8.jpg" alt="fit 8">
+			<button class="view-btn"onclick="openModal('images/fit8.jpg')">View</button>
+            <strong><p>Air force chocolate</p></strong>
+            <p>Premium leather....</p>
+            <strong><p>P1780</p></strong>
+			<button><a href="Order.html">PLACE AN ORDER</a></button>
+        </div>
+    </div>
+
+    <div class="new-wrapper">
+        <div class="gallery">
+            <div class="gallery-item">
+                <img src="images/new9.jpg" width="300" alt="new9">
+			
+            </div>
+            <div class="gallery-text">
+                <strong><p>WANT SOME FOOTWEAR</p></strong>
+                <p>ROLL THE BUTTON TO GET SOME</p>
+                <button class="shop-now"><a href="shoes.html">Shop Now<a></button>
+            </div>
+            <div class="gallery-item">
+                <img src="images/fit9.jpg" alt="fit 9">
+            </div>
+        </div>
+    </div>
+	<div class="new-wrapper">
+        <div class="gallery">
+            <div class="gallery-item">
+				<img source src="images/cap2.jpg" alt="cap2">
+				<p>A'S CAP</p>
+            </div>
+            <div class="gallery-text">
+                <strong><p>WANT SOME HEAD ON</p></strong>
+                <p>ROLL UP</p>
+                <button class="shop-now"><a href="what's new.html">Interested!!!!!</a></button>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cap3.jpg" alt="cap3">
+            </div>
+        </div>
+    </div>
+	 <div class="inside-containers-wrapper">
+	<div class="inside-container">
+         <h3>ABOUT US</h3>
+         <img src="images/fit.jpg" width="200" alt="Ad 1">
+         <p>Candy clothing is global online platform for styling for REDBAT t-shirt also from sportscene<a href="what's new.html">Check new ones</a></p>
+         <img src="images/fit5.jpg"" width = "200 alt="Ad 2">
+         <p>New car financing options available</p>
+      </div>
+	  
+<div class="inside-container">
+   <h2>About Candy Boutique</h2>
+   <p>Candy clothing is the online platform for proving <em>customers</em> with style inspiration and discovering when it comes to fashion</p>
+   <p>We are driven to be the local leading fashion boutique,we provide our customers with a strong perspective</p>
+   <p>This is a serious effort, and to continue to make Candy  clothing a success,we need people who are ready for a stimulating challenge.</p>
+   <p>Visit us today to experience the Candy clothing difference. We look forward to serving you!</p>
+   <img src="images/two.jpg"  width = "250" alt="Ad 4">
+</div>
+<div class="inside-container">
+   <h3>WHAT'S NEW</h3>
+   <img src="images/cap.jpg"  width = "200" alt="Ad 3">
+   <p>Get the best deals offer <a href="#">Check offer</a></p>
+   <img src="images/bag.jpg"  width = "250" alt="Ad 4">
+   <p>Exclusive discounts on each drip <a href="what's new.html">GET CLOSE NOW</a></p>
+</div>
+	<div class="inside-container">
+         <h3>LEARN MORE!!!!!</h3>
+         <img src="images/sport3.jpg" width="200" alt="Ad 1">
+         <p>Candy clothing is global online platform for styling <a href="what's new.html
+		 ">GET MORE</a></p>
+         <img src="images/bag.jpg"" width = "200 alt="Ad 2">
+         <p>New Drip options Available Now!</p>
+      </div>
+	  
+</div>
+</div>
+
+<!-- Modal Structure -->
+<div id="imageModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" alt="">
+    <p id="modalTitle"></p>
+    <p id="modalPrice"></p>
+  </div>
+</div>
+
+<footer>
+<p>&copy; 2025 <strong>Candy Clothing</strong>. All rights reserved.</p>
+<img src="images/facebook.jpg" width="24">
+		<img src="images/instragram.jpg" width="24">
+		<img src="images/twitter.jpg" width="24">
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
